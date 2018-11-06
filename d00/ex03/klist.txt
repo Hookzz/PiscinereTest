@@ -1,0 +1,5 @@
+Credentials cache: API:45AB6559-5133-4138-A5D4-B8F6DA944C24
+        Principal: jlarrieu@42.FR
+
+		  Issued                Expires               Principal
+		  Jul 30 23:08:36 2018  Aug  6 23:08:36 2018  krbtgt/42.FR@42.FR
