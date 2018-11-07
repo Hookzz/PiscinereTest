@@ -6,7 +6,7 @@
 /*   By: jlarrieu <jlarrieu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 09:55:11 by jlarrieu          #+#    #+#             */
-/*   Updated: 2018/11/07 11:11:19 by jlarrieu         ###   ########.fr       */
+/*   Updated: 2018/11/07 18:33:07 by jlarrieu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strstr(const char *str, const char *to_find)
 
 	i = 0;
 	temp = (char*)str;
-	while (str[i])
+	while (str[i++])
 	{
 		j = 0;
 		while (to_find[j] == str[i + j])
@@ -29,7 +29,6 @@ char	*ft_strstr(const char *str, const char *to_find)
 				return (temp + i);
 			j++;
 		}
-		i++;
 	}
 	return (NULL);
 }

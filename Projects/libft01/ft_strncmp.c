@@ -6,13 +6,13 @@
 /*   By: jlarrieu <jlarrieu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:36:26 by jlarrieu          #+#    #+#             */
-/*   Updated: 2018/11/07 17:37:49 by jlarrieu         ###   ########.fr       */
+/*   Updated: 2018/11/07 18:31:22 by jlarrieu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(const char *s1, const char *s2, size_t n)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int i;
 
