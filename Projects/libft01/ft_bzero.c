@@ -6,17 +6,13 @@
 /*   By: jlarrieu <jlarrieu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 13:01:51 by jlarrieu          #+#    #+#             */
-/*   Updated: 2018/11/06 13:37:16 by jlarrieu         ###   ########.fr       */
+/*   Updated: 2018/11/07 11:21:07 by jlarrieu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void	*s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
-
-	i = 0;
-	while (i < n)
-		(unsigned char)s[i++] = '\0';
+	ft_memset(s, 0, n);
 }

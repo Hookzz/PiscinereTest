@@ -6,7 +6,7 @@
 /*   By: jlarrieu <jlarrieu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 18:24:46 by jlarrieu          #+#    #+#             */
-/*   Updated: 2018/11/06 18:32:34 by jlarrieu         ###   ########.fr       */
+/*   Updated: 2018/11/07 16:42:23 by jlarrieu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ size_t		ft_strlen(const char *s)
 {
 	size_t i;
 
-	while (*s++)
+	i = 0;
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }
