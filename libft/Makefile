@@ -6,7 +6,7 @@
 #    By: jlarrieu <jlarrieu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 15:57:20 by jlarrieu          #+#    #+#              #
-#    Updated: 2018/11/09 08:52:25 by jlarrieu         ###   ########.fr        #
+#    Updated: 2018/11/13 12:12:10 by jlarrieu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,10 @@ SRCS =	ft_memdel.c \
 		ft_isalnum.c \
 		ft_isdigit.c \
 		ft_atoi.c \
+		ft_itoa.c \
+		ft_lstnew.c \
+		ft_lstdelone.c \
+		#ft_lstdel.c
 
 OBJECTS = $(SRCS:.c=.o)
 

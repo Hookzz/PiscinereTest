@@ -1,41 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlarrieu <jlarrieu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 08:28:24 by jlarrieu          #+#    #+#             */
-/*   Updated: 2018/11/13 05:43:37 by jlarrieu         ###   ########.fr       */
+/*   Created: 2018/11/13 07:08:38 by jlarrieu          #+#    #+#             */
+/*   Updated: 2018/11/13 12:26:16 by jlarrieu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	int		start;
-	int		end;
-	int		words;
-	size_t	i;
-	char	**tab;
+	t_list	*list;
 
-	i = 0;
-	words = 0;
-	tab = NULL;
-	if (!s || !(tab = (char**)malloc(sizeof(char*) * ft_strlen(s) / 2 + 2)))
+	if (!(list = (t_list*)malloc(sizeof(t_list))))
 		return (NULL);
-	while (i < ft_strlen(s))
+	if (!content || !content_size)
 	{
-		while (s[i] == c && s[i])
-			i++;
-		start = i;
-		while (s[i] != c && s[i])
-			i++;
-		end = i;
-		if ((end - start) > 0)
-			tab[words++] = ft_strsub(s, start, end - start);
+		list->content_size = 0;
+		list->content = NULL;
 	}
-	tab[words] = 0;
-	return (tab);
+	else
+	{
+		list->content = (void*)malloc(sizeof(void*));
+		list->content = ft_memcpy(list->content, content, content_size);
+		list->content_size = content_size;
+	}
+	list->next = NULL;
+	return (list);
 }
