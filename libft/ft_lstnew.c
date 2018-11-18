@@ -6,7 +6,7 @@
 /*   By: jlarrieu <jlarrieu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 07:08:38 by jlarrieu          #+#    #+#             */
-/*   Updated: 2018/11/13 12:26:16 by jlarrieu         ###   ########.fr       */
+/*   Updated: 2018/11/15 13:49:21 by jlarrieu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		list->content = (void*)malloc(sizeof(void*));
+		if(!(list->content = (void*)malloc(sizeof(void) * content_size)))
+			return (NULL);
 		list->content = ft_memcpy(list->content, content, content_size);
 		list->content_size = content_size;
 	}

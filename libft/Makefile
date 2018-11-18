@@ -6,7 +6,7 @@
 #    By: jlarrieu <jlarrieu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 15:57:20 by jlarrieu          #+#    #+#              #
-#    Updated: 2018/11/13 12:12:10 by jlarrieu         ###   ########.fr        #
+#    Updated: 2018/11/16 18:43:04 by jlarrieu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,8 @@ CC = gcc -c
 AR = ar rc
 
 RM = rm -f
+
+FLAGS = -Werror -Wall -Wextra
 
 NAME = libft.a
 
@@ -71,8 +73,11 @@ SRCS =	ft_memdel.c \
 		ft_atoi.c \
 		ft_itoa.c \
 		ft_lstnew.c \
+		ft_lstmap.c \
 		ft_lstdelone.c \
-		#ft_lstdel.c
+		ft_lstdel.c \
+		ft_lstadd.c \
+		ft_lstiter.c
 
 OBJECTS = $(SRCS:.c=.o)
 
@@ -81,7 +86,7 @@ HEADERS_FOLDER = includes/
 all:    $(NAME)
 
 $(NAME):
-		$(CC) $(SRCS)
+		$(CC) $(FLAGS) $(SRCS)
 		$(AR) $(NAME) $(OBJECTS)
 
 clean:
